@@ -8,22 +8,28 @@
 
     <body>
         <h1>jQuery Test Page</h1>
-        <div id ="myDiv">This is my div!</div>
+        <div id ="myDiv">This is my div!
+                <ul>
+                        <li>I am a list item!</li>
+                        <li>I am a list item!</li>
+                        <li>I am a list item!</li>
+                        <li>I am a list item!</li>
+                        <li>I am a list item!</li>
+                        <li>I am a list item!</li>
+                        <li>I am a list item!</li>
+                </ul>
+
+
+
+        </div>
             <script>
-            $ (function(){
-              //alert("Just a dollar sign!");
-
-              /*
-                $("div#myDiv").css("border","2px solid red");
-                $("div#myDiv").css("background-color","yellow");
-                $("div#myDiv").append("This gets added to the div!");
-                */
-
-                let $thisDiv = $("div#myDiv"); 
-
-                $thisDiv.css("border","2px solid red").css("background-color","yellow").append("This gets added to the div!");
-
-
+            $(function(){
+                $("div#myDiv li:even").css("background-color", "yellow");
+                $("div#myDiv").hide().fadeIn(5000, function(){
+                    $("div#myDiv li").each(function(){
+                        $(this).slideDown(2000);
+                    });
+                });
             });
 
             //alert("This is not jQuery!");
