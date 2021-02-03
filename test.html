@@ -1,0 +1,34 @@
+<html>
+     <head>
+
+        <title>jQuery Test Page</title>
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+    </head>
+
+
+    <body>
+        <h1>jQuery Test Page</h1>
+        <div id ="myDiv">This is my div!</div>
+            <script>
+            $ (function(){
+              //alert("Just a dollar sign!");
+
+              /*
+                $("div#myDiv").css("border","2px solid red");
+                $("div#myDiv").css("background-color","yellow");
+                $("div#myDiv").append("This gets added to the div!");
+                */
+
+                let $thisDiv = $("div#myDiv"); 
+
+                $thisDiv.css("border","2px solid red").css("background-color","yellow").append("This gets added to the div!");
+
+
+            });
+
+            //alert("This is not jQuery!");
+
+             </script>
+             
+        </body>
+    </html>
